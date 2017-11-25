@@ -1,12 +1,20 @@
 package org.csu.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * @author by bixi.lx
  * @created on 2017 11 25 21:39
  * 帖子的领域模型
  */
+@Entity
 public class Post {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
     /**
