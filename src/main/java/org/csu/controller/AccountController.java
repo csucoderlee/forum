@@ -19,12 +19,12 @@ public class AccountController {
 
     @GetMapping("/list")
     public Object list() {
-        accountRepository.findAll();
+        return accountRepository.findAll();
     }
 
     @GetMapping("/detail")
     public Object detail(Long accountId) {
-        accountRepository.findOne(accountId);
+        return accountRepository.findOne(accountId);
     }
 
     @PostMapping("/save")
