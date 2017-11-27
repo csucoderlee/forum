@@ -59,6 +59,20 @@ public class PostController {
         return postRepository.modifyById(theme, id);
     }
 
+    /**
+     * 点击进入该帖子，查看帖子详情
+     * @param postId
+     * @return
+     */
+    @GetMapping("/detail")
+    public Object detail(Long postId) {
+        return postRepository.findOne(postId);
+    }
+
+    /**
+     * 响应成功返回数据
+     * @return
+     */
     private Map<String, Object> successResponse() {
         HashMap<String, Object> result = new HashMap<>();
         result.put("message", "success");
