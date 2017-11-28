@@ -1,7 +1,6 @@
 package org.csu.repository;
 
 import org.csu.domain.Account;
-import org.csu.domain.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
