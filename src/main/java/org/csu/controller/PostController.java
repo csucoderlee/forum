@@ -5,6 +5,7 @@ import org.csu.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -16,6 +17,7 @@ import java.util.Map;
  * 帖子的相关操作接口
  */
 @RestController
+@RequestMapping("/post")
 public class PostController {
 
     @Autowired

@@ -3,15 +3,19 @@ package org.csu.controller;
 import org.csu.domain.Account;
 import org.csu.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author by bixi.lx
  * @created on 2017 11 27 10:01
  */
+
 @RestController
+@RequestMapping("/account")
 public class AccountController {
 
     @Autowired
