@@ -11,3 +11,4 @@
 - 更新语句参数传进来没有中文乱码，但是保存到数据就有中文乱码    
     这样就不行 url:jdbc:mysql://localhost:3306/forum?useUnicode=true&amp;characterEncoding=utf-8
     这样就可以了 url: jdbc:mysql://localhost:3306/forum?characterEncoding=utf-8
+- thymleaf 模板引擎的使用
