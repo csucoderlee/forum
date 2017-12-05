@@ -26,8 +26,8 @@ public class PostController {
     @GetMapping("/list")
     public Object list() {
 
-        //todo 按照分类查看帖子
-        //todo 更高完成度，按照当前登录人的喜欢来推荐帖子，推荐相应的分类标签
+        //TODO 按照分类查看帖子
+        //TODO 更高完成度，按照当前登录人的喜欢来推荐帖子，推荐相应的分类标签
         HashMap<String, Object> result = new HashMap<>();
         result.put("list", postRepository.findAll());
         result.put("count", postRepository.count());
@@ -36,7 +36,7 @@ public class PostController {
 
     @PostMapping("/save")
     public Object save(Post post) {
-        //todo 创建帖子或是需要积分， 或是需要管理员审核
+        //TODO 创建帖子或是需要积分， 或是需要管理员审核
         return postRepository.save(post);
     }
 
@@ -47,7 +47,7 @@ public class PostController {
      */
     @PostMapping("/delete")
     public Object delete(Long id) {
-        //todo 管理员和作者才能删除帖子
+        //TODO 管理员和作者才能删除帖子
         if (postRepository.exists(id)) {
             postRepository.delete(id);
         } else {
