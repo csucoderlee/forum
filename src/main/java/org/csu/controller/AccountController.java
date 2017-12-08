@@ -46,8 +46,14 @@ public class AccountController {
 //        response.sendRedirect("some-url");
 //    }
 
-    @GetMapping("/login")
-    public Object login(Account account) {
-        return new ModelAndView("login");
-    }
+//    /**
+//     * 浏览器输入 访问地址 /account/login 直接去访问登录页面
+//     * 已经放到WebMvcConfig中做了
+//     * @param account
+//     * @return
+//     */
+//    @GetMapping("/login")
+//    public Object toLoginPage(Account account) {
+//        return new ModelAndView("login");
+//    }
 }
