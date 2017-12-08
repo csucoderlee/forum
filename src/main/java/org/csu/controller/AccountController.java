@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * @author by bixi.lx
@@ -34,5 +38,16 @@ public class AccountController {
     @PostMapping("/save")
     public Object save(Account account) {
         return accountRepository.save(account);
+    }
+
+    //重定向的逻辑
+//    @GetMapping("/url")
+//    public void login(Account account, HttpServletResponse response) throws IOException {
+//        response.sendRedirect("some-url");
+//    }
+
+    @GetMapping("/login")
+    public Object login(Account account) {
+        return new ModelAndView("login");
     }
 }

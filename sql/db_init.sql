@@ -14,3 +14,14 @@ CREATE TABLE `post` (
 --  Records of `post`
 -- ----------------------------
 INSERT INTO `post` VALUES ('1', '帖子1', '1111111', '李想');
+
+-- ----------------------------
+--  Table structure for `account`
+-- ----------------------------
+DROP TABLE IF EXISTS `account`;
+CREATE TABLE `accout` (
+  `id` bigint(22) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;

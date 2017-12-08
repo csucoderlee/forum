@@ -4,6 +4,11 @@ spring:
     username: root
     password: csucoderlee
     url: jdbc:mysql://localhost:3306/forum?useUnicode=true&amp;characterEncoding=utf-8
+  thymeleaf:
+    cache: false
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
 
 #  http:
 #    encoding:
@@ -11,3 +16,4 @@ spring:
 #      force: true
 #      force-request: true
 #      force-response: true
+# Enable template caching.
