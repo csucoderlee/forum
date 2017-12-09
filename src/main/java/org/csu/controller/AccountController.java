@@ -40,6 +40,11 @@ public class AccountController {
         return accountRepository.save(account);
     }
 
+    @PostMapping("/login")
+    public Object login(Account account) {
+        return accountRepository.findByUsernameAndPassword(account.getName(), account.getPassword());
+    }
+
     //重定向的逻辑
 //    @GetMapping("/url")
 //    public void login(Account account, HttpServletResponse response) throws IOException {
