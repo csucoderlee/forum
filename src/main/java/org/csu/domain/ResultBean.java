@@ -7,6 +7,7 @@ import java.io.Serializable;
  * @author by bixi.lx
  * @created on 2017 12 11 13:15
  */
+
 public class ResultBean<T> implements Serializable {
 
     public static final int SUCCESS = 0;
@@ -32,5 +33,13 @@ public class ResultBean<T> implements Serializable {
         super();
         this.msg = e.toString();
         this.code = FAIL;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
     }
 }
