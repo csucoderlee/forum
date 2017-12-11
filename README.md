@@ -8,6 +8,9 @@
 
 ## 技术点
 - @RestController 给所有的controller方法都添加了@ResponseBody注解
+
+- spring boot 添加aop实现拦截器
+
 ## 遗留问题
 - 更新语句为啥一定要加@Transactional
 - 更新语句参数传进来没有中文乱码，但是保存到数据就有中文乱码    

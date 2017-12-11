@@ -1,6 +1,7 @@
 package org.csu.controller;
 
 import org.csu.domain.Account;
+import org.csu.domain.ResultBean;
 import org.csu.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -43,6 +44,11 @@ public class AccountController {
     @PostMapping("/login")
     public Object login(Account account) {
         return accountRepository.findByUsernameAndPassword(account.getName(), account.getPassword());
+    }
+
+    @GetMapping("/test")
+    public ResultBean test(Long accountId) {
+        return new ResultBean<Account>(accountRepository.findOne(accountId));
     }
 
     //重定向的逻辑
