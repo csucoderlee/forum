@@ -3,6 +3,7 @@ package org.csu.controller;
 import org.csu.domain.Account;
 import org.csu.domain.ResultBean;
 import org.csu.repository.AccountRepository;
+import org.csu.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,8 @@ public class AccountController {
 
     @Autowired
     AccountRepository accountRepository;
+    @Autowired
+    AccountService accountService;
 
     @GetMapping("/list")
     public Object list() {
@@ -51,6 +54,10 @@ public class AccountController {
         return new ResultBean<Account>(accountRepository.findOne(accountId));
     }
 
+    @GetMapping("/test1")
+    public ResultBean test1() {
+        return new ResultBean(accountService.login());
+    }
     //重定向的逻辑
 //    @GetMapping("/url")
 //    public void login(Account account, HttpServletResponse response) throws IOException {

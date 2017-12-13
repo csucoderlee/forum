@@ -2,11 +2,13 @@ package org.csu.intercepter;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.csu.domain.ResultBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,6 +21,8 @@ import java.util.Set;
  * @author by bixi.lx
  * @created on 2017 12 11 12:32
  */
+@Aspect
+@Component
 public class ControllerInterceptor {
 
     private static final Logger logger = LoggerFactory.getLogger(ControllerInterceptor.class);
@@ -110,7 +114,7 @@ public class ControllerInterceptor {
 //        return result;
 //    }
 
-    private ResultBean<?> handlerException(ProceedingJoinPoint pjp, Throwable e) {
+    private ResultBean<?>        handlerException(ProceedingJoinPoint pjp, Throwable e) {
         ResultBean<?> result = new ResultBean();
 
         //TODO 处理系统已知异常
