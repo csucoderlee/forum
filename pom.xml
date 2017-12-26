@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.csu</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>forum</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>spring-session-redis</module>
