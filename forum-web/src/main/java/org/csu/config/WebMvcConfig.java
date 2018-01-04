@@ -15,16 +15,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("login");
-        registry.addViewController("/account/login").setViewName("login");
+//        registry.addViewController("/account/login").setViewName("login");
     }
-
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        // 多个拦截器组成一个拦截器链
-//        // addPathPatterns 用于添加拦截规则
-//        // excludePathPatterns 用户排除拦截
-//        registry.addInterceptor(new ControllerInterceptor());
-//        super.addInterceptors(registry);
-//    }
 }
 

@@ -44,6 +44,17 @@ public class AccountController {
         return accountRepository.save(account);
     }
 
+    /**
+     * 浏览器输入 访问地址 /account/login 即为get请求，直接去访问登录页面
+     * 已经放到WebMvcConfig中做了
+     * @param account
+     * @return
+     */
+    @GetMapping("/login")
+    public Object toLoginPage(Account account) {
+        return new ModelAndView("login");
+    }
+
     @PostMapping("/login")
     public Object login(Account account) {
         return accountRepository.findByUsernameAndPassword(account.getName(), account.getPassword());
@@ -58,20 +69,4 @@ public class AccountController {
     public ResultBean test1() {
         return new ResultBean(accountService.login());
     }
-    //重定向的逻辑
-//    @GetMapping("/url")
-//    public void login(Account account, HttpServletResponse response) throws IOException {
-//        response.sendRedirect("some-url");
-//    }
-
-//    /**
-//     * 浏览器输入 访问地址 /account/login 直接去访问登录页面
-//     * 已经放到WebMvcConfig中做了
-//     * @param account
-//     * @return
-//     */
-//    @GetMapping("/login")
-//    public Object toLoginPage(Account account) {
-//        return new ModelAndView("login");
-//    }
 }
