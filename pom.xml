@@ -70,12 +70,20 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!--<plugin>-->
+                    <!--<groupId>org.springframework.boot</groupId>-->
+                    <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                    <!--&lt;!&ndash;<configuration>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</configuration>&ndash;&gt;-->
+                <!--</plugin>-->
                 <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <!--<configuration>-->
-                    <!--<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>-->
-                    <!--</configuration>-->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
                 </plugin>
 
             </plugins>
