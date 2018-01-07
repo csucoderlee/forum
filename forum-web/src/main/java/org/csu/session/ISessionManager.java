@@ -19,6 +19,14 @@ public interface ISessionManager {
      */
     ISession getSession(String sessionId, HttpServletRequest request, HttpServletResponse response) throws SessionException;
 
+    /**
+     * 为每个用户创建一个会话
+     * @param staffId
+     * @param request
+     * @param response
+     * @return
+     * @throws SessionException
+     */
     ISession createStaffSession(Long staffId, HttpServletRequest request, HttpServletResponse response) throws SessionException;
 
     /**
