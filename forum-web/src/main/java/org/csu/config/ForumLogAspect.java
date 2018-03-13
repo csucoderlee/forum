@@ -31,13 +31,13 @@ public class ForumLogAspect {
 
         Object result = null;
 
-        logger.info(String.format("执行逻辑出错[%s]", forumLog.getTitle()));
+        logger.info(String.format("执行逻辑日志[%s]", forumLog.getTitle()));
         try {
             result = point.proceed();
         } catch (Throwable e) {
             forumLog.setErrMsg(StringUtils.trimToEmpty(ExceptionUtils.getStackTrace(e)));
             forumLog.setError(true);
-            logger.error("报表计算失败！" + e.getMessage(), e);
+            logger.error("执行逻辑出错[%s]！" + e.getMessage(), e);
         } finally {
             long end = System.currentTimeMillis();
             forumLog.setEnd(new Date(end));
